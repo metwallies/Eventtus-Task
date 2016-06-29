@@ -1,0 +1,42 @@
+//
+//  ViewController.m
+//  Eventtus-TwitterClient
+//
+//  Created by islam metwally on 6/27/16.
+//  Copyright © 2016 Islam Metwally. All rights reserved.
+//
+
+#import "LoginViewController.h"
+#import <TwitterKit/TwitterKit.h>
+
+@interface LoginViewController ()
+
+@end
+
+@implementation LoginViewController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    // Do any additional setup after loading the view, typically from a nib.
+    
+    TWTRLogInButton *logInButton = [TWTRLogInButton buttonWithLogInCompletion:^(TWTRSession *session, NSError *error) {
+        if (session) {
+            
+            
+        } else {
+            NSLog(@"Login error: %@", [error localizedDescription]);
+        }
+    }];
+    
+    // TODO: Change where the log in button is positioned in your view
+    logInButton.center = self.view.center;
+    [self.view addSubview:logInButton];
+
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+@end

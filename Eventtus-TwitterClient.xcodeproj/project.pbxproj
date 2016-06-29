@@ -1,0 +1,458 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DF2BC8531D21A77500907EDF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DF2BC8521D21A77500907EDF /* main.m */; };
+		DF2BC8561D21A77500907EDF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DF2BC8551D21A77500907EDF /* AppDelegate.m */; };
+		DF2BC8591D21A77500907EDF /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF2BC8581D21A77500907EDF /* LoginViewController.m */; };
+		DF2BC85C1D21A77500907EDF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF2BC85A1D21A77500907EDF /* Main.storyboard */; };
+		DF2BC85F1D21A77500907EDF /* Eventtus_TwitterClient.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DF2BC85D1D21A77500907EDF /* Eventtus_TwitterClient.xcdatamodeld */; };
+		DF2BC8611D21A77500907EDF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF2BC8601D21A77500907EDF /* Assets.xcassets */; };
+		DF2BC8641D21A77500907EDF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF2BC8621D21A77500907EDF /* LaunchScreen.storyboard */; };
+		DF2BC8701D21AA5100907EDF /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF2BC86F1D21AA5100907EDF /* HomeViewController.m */; };
+		DFA4F3A51D235201000A0D9D /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DFA4F3A41D235201000A0D9D /* NetworkManager.m */; };
+		FBC3AFFAC9DA71B63EA9635E /* Pods_Eventtus_TwitterClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B50185FA8975984D98DDFA0D /* Pods_Eventtus_TwitterClient.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		9BE14ECA366DADE190019D7D /* Pods-Eventtus-TwitterClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Eventtus-TwitterClient.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Eventtus-TwitterClient/Pods-Eventtus-TwitterClient.debug.xcconfig"; sourceTree = "<group>"; };
+		B50185FA8975984D98DDFA0D /* Pods_Eventtus_TwitterClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Eventtus_TwitterClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC4AC43C3D63DA55784DA88C /* Pods-Eventtus-TwitterClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Eventtus-TwitterClient.release.xcconfig"; path = "Pods/Target Support Files/Pods-Eventtus-TwitterClient/Pods-Eventtus-TwitterClient.release.xcconfig"; sourceTree = "<group>"; };
+		DF2BC84E1D21A77500907EDF /* Eventtus-TwitterClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Eventtus-TwitterClient.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF2BC8521D21A77500907EDF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DF2BC8541D21A77500907EDF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		DF2BC8551D21A77500907EDF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		DF2BC8571D21A77500907EDF /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		DF2BC8581D21A77500907EDF /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		DF2BC85B1D21A77500907EDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DF2BC85E1D21A77500907EDF /* Eventtus_TwitterClient.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Eventtus_TwitterClient.xcdatamodel; sourceTree = "<group>"; };
+		DF2BC8601D21A77500907EDF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DF2BC8631D21A77500907EDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DF2BC8651D21A77500907EDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DF2BC86E1D21AA5100907EDF /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		DF2BC86F1D21AA5100907EDF /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		DFA4F3A31D235201000A0D9D /* NetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkManager.h; sourceTree = "<group>"; };
+		DFA4F3A41D235201000A0D9D /* NetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkManager.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DF2BC84B1D21A77400907EDF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FBC3AFFAC9DA71B63EA9635E /* Pods_Eventtus_TwitterClient.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		46DC10AF3B3324AE27F964E6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B50185FA8975984D98DDFA0D /* Pods_Eventtus_TwitterClient.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D5DA80D786C238BF25F25FD2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9BE14ECA366DADE190019D7D /* Pods-Eventtus-TwitterClient.debug.xcconfig */,
+				CC4AC43C3D63DA55784DA88C /* Pods-Eventtus-TwitterClient.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		DF2BC8451D21A77400907EDF = {
+			isa = PBXGroup;
+			children = (
+				DF2BC8501D21A77500907EDF /* Eventtus-TwitterClient */,
+				DF2BC84F1D21A77500907EDF /* Products */,
+				D5DA80D786C238BF25F25FD2 /* Pods */,
+				46DC10AF3B3324AE27F964E6 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		DF2BC84F1D21A77500907EDF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DF2BC84E1D21A77500907EDF /* Eventtus-TwitterClient.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DF2BC8501D21A77500907EDF /* Eventtus-TwitterClient */ = {
+			isa = PBXGroup;
+			children = (
+				DF2BC86C1D21A9C000907EDF /* Views */,
+				DF2BC8601D21A77500907EDF /* Assets.xcassets */,
+				DFA4F3A31D235201000A0D9D /* NetworkManager.h */,
+				DFA4F3A41D235201000A0D9D /* NetworkManager.m */,
+				DF2BC8621D21A77500907EDF /* LaunchScreen.storyboard */,
+				DF2BC85D1D21A77500907EDF /* Eventtus_TwitterClient.xcdatamodeld */,
+				DF2BC8511D21A77500907EDF /* Supporting Files */,
+			);
+			path = "Eventtus-TwitterClient";
+			sourceTree = "<group>";
+		};
+		DF2BC8511D21A77500907EDF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DF2BC86B1D21A9B000907EDF /* AppDelegate */,
+				DF2BC8651D21A77500907EDF /* Info.plist */,
+				DF2BC8521D21A77500907EDF /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DF2BC86B1D21A9B000907EDF /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				DF2BC8541D21A77500907EDF /* AppDelegate.h */,
+				DF2BC8551D21A77500907EDF /* AppDelegate.m */,
+			);
+			name = AppDelegate;
+			sourceTree = "<group>";
+		};
+		DF2BC86C1D21A9C000907EDF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DF2BC85A1D21A77500907EDF /* Main.storyboard */,
+				DF2BC86D1D21A9D700907EDF /* Login */,
+				DF2BC8711D21AA6900907EDF /* Home */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		DF2BC86D1D21A9D700907EDF /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				DF2BC8571D21A77500907EDF /* LoginViewController.h */,
+				DF2BC8581D21A77500907EDF /* LoginViewController.m */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		DF2BC8711D21AA6900907EDF /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				DF2BC86E1D21AA5100907EDF /* HomeViewController.h */,
+				DF2BC86F1D21AA5100907EDF /* HomeViewController.m */,
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DF2BC84D1D21A77400907EDF /* Eventtus-TwitterClient */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DF2BC8681D21A77500907EDF /* Build configuration list for PBXNativeTarget "Eventtus-TwitterClient" */;
+			buildPhases = (
+				105D80B2D7CAC92292ABAFB3 /* Check Pods Manifest.lock */,
+				DF2BC84A1D21A77400907EDF /* Sources */,
+				DF2BC84B1D21A77400907EDF /* Frameworks */,
+				DF2BC84C1D21A77400907EDF /* Resources */,
+				DFC293F01D2217C100B713FB /* ShellScript */,
+				8B96BE18BBDCF269BCF53046 /* Embed Pods Frameworks */,
+				9F402ECA4548ED6CA56A4FAD /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Eventtus-TwitterClient";
+			productName = "Eventtus-TwitterClient";
+			productReference = DF2BC84E1D21A77500907EDF /* Eventtus-TwitterClient.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DF2BC8461D21A77400907EDF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = "Islam Metwally";
+				TargetAttributes = {
+					DF2BC84D1D21A77400907EDF = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
+				};
+			};
+			buildConfigurationList = DF2BC8491D21A77400907EDF /* Build configuration list for PBXProject "Eventtus-TwitterClient" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DF2BC8451D21A77400907EDF;
+			productRefGroup = DF2BC84F1D21A77500907EDF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DF2BC84D1D21A77400907EDF /* Eventtus-TwitterClient */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DF2BC84C1D21A77400907EDF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF2BC8641D21A77500907EDF /* LaunchScreen.storyboard in Resources */,
+				DF2BC8611D21A77500907EDF /* Assets.xcassets in Resources */,
+				DF2BC85C1D21A77500907EDF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		105D80B2D7CAC92292ABAFB3 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8B96BE18BBDCF269BCF53046 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Eventtus-TwitterClient/Pods-Eventtus-TwitterClient-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9F402ECA4548ED6CA56A4FAD /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Eventtus-TwitterClient/Pods-Eventtus-TwitterClient-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DFC293F01D2217C100B713FB /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/Fabric.framework/run\" ddf5862886759bc4fd3267f8444e0d19e17d3bd4 e6b2ef1e3f9f8bffc8aa511606d7fbc39f1302b22f39523677721cbf591d6bad";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DF2BC84A1D21A77400907EDF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF2BC8591D21A77500907EDF /* LoginViewController.m in Sources */,
+				DF2BC8561D21A77500907EDF /* AppDelegate.m in Sources */,
+				DF2BC85F1D21A77500907EDF /* Eventtus_TwitterClient.xcdatamodeld in Sources */,
+				DF2BC8701D21AA5100907EDF /* HomeViewController.m in Sources */,
+				DFA4F3A51D235201000A0D9D /* NetworkManager.m in Sources */,
+				DF2BC8531D21A77500907EDF /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		DF2BC85A1D21A77500907EDF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DF2BC85B1D21A77500907EDF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DF2BC8621D21A77500907EDF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DF2BC8631D21A77500907EDF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DF2BC8661D21A77500907EDF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		DF2BC8671D21A77500907EDF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DF2BC8691D21A77500907EDF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9BE14ECA366DADE190019D7D /* Pods-Eventtus-TwitterClient.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Eventtus-TwitterClient/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.IM.Eventtus-TwitterClient";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		DF2BC86A1D21A77500907EDF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CC4AC43C3D63DA55784DA88C /* Pods-Eventtus-TwitterClient.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Eventtus-TwitterClient/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.IM.Eventtus-TwitterClient";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DF2BC8491D21A77400907EDF /* Build configuration list for PBXProject "Eventtus-TwitterClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF2BC8661D21A77500907EDF /* Debug */,
+				DF2BC8671D21A77500907EDF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DF2BC8681D21A77500907EDF /* Build configuration list for PBXNativeTarget "Eventtus-TwitterClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF2BC8691D21A77500907EDF /* Debug */,
+				DF2BC86A1D21A77500907EDF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		DF2BC85D1D21A77500907EDF /* Eventtus_TwitterClient.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				DF2BC85E1D21A77500907EDF /* Eventtus_TwitterClient.xcdatamodel */,
+			);
+			currentVersion = DF2BC85E1D21A77500907EDF /* Eventtus_TwitterClient.xcdatamodel */;
+			path = Eventtus_TwitterClient.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = DF2BC8461D21A77400907EDF /* Project object */;
+}
