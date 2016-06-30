@@ -7,6 +7,7 @@
 //
 
 #import "NetworkManager.h"
+#import "Follower.h"
 
 static NetworkManager *sharedInstance;
 
@@ -27,9 +28,74 @@ static NetworkManager *sharedInstance;
     self.observers = [NSArray arrayWithArray:copy];
 }
 
--(void) fetchTweetsWithTwtrSession:(TWTRSession *)session {
+-(void) fetchFollowers {
     
+    //https://api.twitter.com/1.1/followers/list.json
     
+    TWTRAPIClient *client = [TWTRAPIClient clientWithCurrentUser];
+    NSURLRequest *request = [client URLRequestWithMethod:@"GET"
+                                                     URL:[NSString stringWithFormat:@"https://api.twitter.com/1.1/followers/list.json?user_id=%@&count=150", [UserManager sharedInstance].currentLoggedInUser.userID]
+                                              parameters:nil
+                                                   error:nil];
+    
+    [client sendTwitterRequest:request completion:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+        if (!connectionError && data) {
+            
+            NSError *jsonError;
+            NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data
+                                                                 options:NSJSONReadingMutableLeaves
+                                                                   error:&jsonError];
+            if (!jsonError) {
+                NSMutableArray *followers = [[NSMutableArray alloc] init];
+                NSArray *users = [json objectForKey:@"users"];
+                if (users != nil) {
+                    for (NSDictionary *jsonFollower in users) {
+                        
+                        Follower *tempFollower = [[Follower alloc] initWithDictionary:jsonFollower];
+                        [followers addObject:tempFollower];
+                    }
+                    if (followers.count) {
+                        
+                        [self successGotFollowerBlock:followers];
+                    }
+                    else {
+                        [self failGotFollowerBlock:@"No available followers"];
+                    }
+                }
+                else {
+                    [self failGotFollowerBlock:@"No available followers"];
+                }
+            }
+            else {
+                [self failGotFollowerBlock:@"Something is wrong with the data"];
+            }
+        }
+        else {
+            [self failGotFollowerBlock:@"Connection error"];
+        }
+    }];
+}
+
+//routine upon get followers success
+-(void) successGotFollowerBlock:(NSArray *)followers {
+    NSArray *copy = [NSArray arrayWithArray:self.observers];
+    for (id<NetworkManagerDelegate> observer in copy) {
+        
+        if ([observer respondsToSelector:@selector(gotFollowers:)]) {
+            [observer gotFollowers:followers];
+        }
+    }
+}
+
+//routine upon get followers failure
+-(void) failGotFollowerBlock:(NSString *)error {
+    NSArray *copy = [NSArray arrayWithArray:self.observers];
+    for (id<NetworkManagerDelegate> observer in copy) {
+        
+        if ([observer respondsToSelector:@selector(failedToGetFollowers:)]) {
+            [observer failedToGetFollowers:error];
+        }
+    }
 }
 
 @end

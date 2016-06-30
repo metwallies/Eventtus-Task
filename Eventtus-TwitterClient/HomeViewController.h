@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <TwitterKit/TwitterKit.h>
+#import "NetworkManager.h"
 
 @interface HomeViewController : UIViewController
 

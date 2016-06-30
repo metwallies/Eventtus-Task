@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DF0656AC1D25979C0048FBB4 /* UIViewController+String.m in Sources */ = {isa = PBXBuildFile; fileRef = DF0656AB1D25979C0048FBB4 /* UIViewController+String.m */; };
+		DF0656AF1D25996C0048FBB4 /* FollowersCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DF0656AE1D25996C0048FBB4 /* FollowersCell.m */; };
 		DF2BC8531D21A77500907EDF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DF2BC8521D21A77500907EDF /* main.m */; };
-		DF2BC8561D21A77500907EDF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DF2BC8551D21A77500907EDF /* AppDelegate.m */; };
 		DF2BC8591D21A77500907EDF /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF2BC8581D21A77500907EDF /* LoginViewController.m */; };
 		DF2BC85C1D21A77500907EDF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF2BC85A1D21A77500907EDF /* Main.storyboard */; };
 		DF2BC85F1D21A77500907EDF /* Eventtus_TwitterClient.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DF2BC85D1D21A77500907EDF /* Eventtus_TwitterClient.xcdatamodeld */; };
@@ -16,6 +17,10 @@
 		DF2BC8641D21A77500907EDF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF2BC8621D21A77500907EDF /* LaunchScreen.storyboard */; };
 		DF2BC8701D21AA5100907EDF /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF2BC86F1D21AA5100907EDF /* HomeViewController.m */; };
 		DFA4F3A51D235201000A0D9D /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DFA4F3A41D235201000A0D9D /* NetworkManager.m */; };
+		DFC777191D24924A004B4F7C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DFC777181D24924A004B4F7C /* AppDelegate.m */; };
+		DFC777201D24B381004B4F7C /* Follower.m in Sources */ = {isa = PBXBuildFile; fileRef = DFC7771F1D24B381004B4F7C /* Follower.m */; };
+		DFC777231D24BF6A004B4F7C /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = DFC777221D24BF6A004B4F7C /* User.m */; };
+		DFC777261D24C08B004B4F7C /* UserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DFC777251D24C08B004B4F7C /* UserManager.m */; };
 		FBC3AFFAC9DA71B63EA9635E /* Pods_Eventtus_TwitterClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B50185FA8975984D98DDFA0D /* Pods_Eventtus_TwitterClient.framework */; };
 /* End PBXBuildFile section */
 
@@ -23,10 +28,12 @@
 		9BE14ECA366DADE190019D7D /* Pods-Eventtus-TwitterClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Eventtus-TwitterClient.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Eventtus-TwitterClient/Pods-Eventtus-TwitterClient.debug.xcconfig"; sourceTree = "<group>"; };
 		B50185FA8975984D98DDFA0D /* Pods_Eventtus_TwitterClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Eventtus_TwitterClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC4AC43C3D63DA55784DA88C /* Pods-Eventtus-TwitterClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Eventtus-TwitterClient.release.xcconfig"; path = "Pods/Target Support Files/Pods-Eventtus-TwitterClient/Pods-Eventtus-TwitterClient.release.xcconfig"; sourceTree = "<group>"; };
+		DF0656AA1D25979C0048FBB4 /* UIViewController+String.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+String.h"; sourceTree = "<group>"; };
+		DF0656AB1D25979C0048FBB4 /* UIViewController+String.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+String.m"; sourceTree = "<group>"; };
+		DF0656AD1D25996C0048FBB4 /* FollowersCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FollowersCell.h; sourceTree = "<group>"; };
+		DF0656AE1D25996C0048FBB4 /* FollowersCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FollowersCell.m; sourceTree = "<group>"; };
 		DF2BC84E1D21A77500907EDF /* Eventtus-TwitterClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Eventtus-TwitterClient.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF2BC8521D21A77500907EDF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		DF2BC8541D21A77500907EDF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		DF2BC8551D21A77500907EDF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		DF2BC8571D21A77500907EDF /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		DF2BC8581D21A77500907EDF /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		DF2BC85B1D21A77500907EDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -38,6 +45,16 @@
 		DF2BC86F1D21AA5100907EDF /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		DFA4F3A31D235201000A0D9D /* NetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkManager.h; sourceTree = "<group>"; };
 		DFA4F3A41D235201000A0D9D /* NetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkManager.m; sourceTree = "<group>"; };
+		DFC777171D24924A004B4F7C /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		DFC777181D24924A004B4F7C /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		DFC7771A1D249314004B4F7C /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		DFC7771B1D249367004B4F7C /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		DFC7771E1D24B381004B4F7C /* Follower.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Follower.h; sourceTree = "<group>"; };
+		DFC7771F1D24B381004B4F7C /* Follower.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Follower.m; sourceTree = "<group>"; };
+		DFC777211D24BF6A004B4F7C /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		DFC777221D24BF6A004B4F7C /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		DFC777241D24C08B004B4F7C /* UserManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserManager.h; sourceTree = "<group>"; };
+		DFC777251D24C08B004B4F7C /* UserManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,11 +108,12 @@
 			isa = PBXGroup;
 			children = (
 				DF2BC86C1D21A9C000907EDF /* Views */,
-				DF2BC8601D21A77500907EDF /* Assets.xcassets */,
-				DFA4F3A31D235201000A0D9D /* NetworkManager.h */,
-				DFA4F3A41D235201000A0D9D /* NetworkManager.m */,
-				DF2BC8621D21A77500907EDF /* LaunchScreen.storyboard */,
+				DFC7771C1D24B05D004B4F7C /* Controller */,
 				DF2BC85D1D21A77500907EDF /* Eventtus_TwitterClient.xcdatamodeld */,
+				DFC7771E1D24B381004B4F7C /* Follower.h */,
+				DFC7771F1D24B381004B4F7C /* Follower.m */,
+				DFC777211D24BF6A004B4F7C /* User.h */,
+				DFC777221D24BF6A004B4F7C /* User.m */,
 				DF2BC8511D21A77500907EDF /* Supporting Files */,
 			);
 			path = "Eventtus-TwitterClient";
@@ -104,6 +122,9 @@
 		DF2BC8511D21A77500907EDF /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				DF2BC8601D21A77500907EDF /* Assets.xcassets */,
+				DFC7771A1D249314004B4F7C /* Constants.h */,
+				DFC7771B1D249367004B4F7C /* PrefixHeader.pch */,
 				DF2BC86B1D21A9B000907EDF /* AppDelegate */,
 				DF2BC8651D21A77500907EDF /* Info.plist */,
 				DF2BC8521D21A77500907EDF /* main.m */,
@@ -114,8 +135,8 @@
 		DF2BC86B1D21A9B000907EDF /* AppDelegate */ = {
 			isa = PBXGroup;
 			children = (
-				DF2BC8541D21A77500907EDF /* AppDelegate.h */,
-				DF2BC8551D21A77500907EDF /* AppDelegate.m */,
+				DFC777171D24924A004B4F7C /* AppDelegate.h */,
+				DFC777181D24924A004B4F7C /* AppDelegate.m */,
 			);
 			name = AppDelegate;
 			sourceTree = "<group>";
@@ -123,9 +144,12 @@
 		DF2BC86C1D21A9C000907EDF /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				DF2BC8621D21A77500907EDF /* LaunchScreen.storyboard */,
 				DF2BC85A1D21A77500907EDF /* Main.storyboard */,
 				DF2BC86D1D21A9D700907EDF /* Login */,
 				DF2BC8711D21AA6900907EDF /* Home */,
+				DF0656AD1D25996C0048FBB4 /* FollowersCell.h */,
+				DF0656AE1D25996C0048FBB4 /* FollowersCell.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -146,6 +170,27 @@
 				DF2BC86F1D21AA5100907EDF /* HomeViewController.m */,
 			);
 			name = Home;
+			sourceTree = "<group>";
+		};
+		DFC7771C1D24B05D004B4F7C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DFC7771D1D24B06A004B4F7C /* Network Controller */,
+				DFC777241D24C08B004B4F7C /* UserManager.h */,
+				DFC777251D24C08B004B4F7C /* UserManager.m */,
+				DF0656AA1D25979C0048FBB4 /* UIViewController+String.h */,
+				DF0656AB1D25979C0048FBB4 /* UIViewController+String.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		DFC7771D1D24B06A004B4F7C /* Network Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DFA4F3A31D235201000A0D9D /* NetworkManager.h */,
+				DFA4F3A41D235201000A0D9D /* NetworkManager.m */,
+			);
+			name = "Network Controller";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -283,12 +328,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF0656AF1D25996C0048FBB4 /* FollowersCell.m in Sources */,
+				DFC777231D24BF6A004B4F7C /* User.m in Sources */,
+				DFC777261D24C08B004B4F7C /* UserManager.m in Sources */,
 				DF2BC8591D21A77500907EDF /* LoginViewController.m in Sources */,
-				DF2BC8561D21A77500907EDF /* AppDelegate.m in Sources */,
+				DFC777201D24B381004B4F7C /* Follower.m in Sources */,
 				DF2BC85F1D21A77500907EDF /* Eventtus_TwitterClient.xcdatamodeld in Sources */,
+				DFC777191D24924A004B4F7C /* AppDelegate.m in Sources */,
 				DF2BC8701D21AA5100907EDF /* HomeViewController.m in Sources */,
 				DFA4F3A51D235201000A0D9D /* NetworkManager.m in Sources */,
 				DF2BC8531D21A77500907EDF /* main.m in Sources */,
+				DF0656AC1D25979C0048FBB4 /* UIViewController+String.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,6 +449,8 @@
 			baseConfigurationReference = 9BE14ECA366DADE190019D7D /* Pods-Eventtus-TwitterClient.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Eventtus-TwitterClient/PrefixHeader.pch";
 				INFOPLIST_FILE = "Eventtus-TwitterClient/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.IM.Eventtus-TwitterClient";
@@ -411,6 +463,8 @@
 			baseConfigurationReference = CC4AC43C3D63DA55784DA88C /* Pods-Eventtus-TwitterClient.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Eventtus-TwitterClient/PrefixHeader.pch";
 				INFOPLIST_FILE = "Eventtus-TwitterClient/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.IM.Eventtus-TwitterClient";

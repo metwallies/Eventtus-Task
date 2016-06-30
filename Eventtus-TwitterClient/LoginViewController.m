@@ -8,6 +8,9 @@
 
 #import "LoginViewController.h"
 #import <TwitterKit/TwitterKit.h>
+#import "HomeViewController.h"
+#import "AppDelegate.h"
+#import "UserManager.h"
 
 @interface LoginViewController ()
 
@@ -22,6 +25,10 @@
     TWTRLogInButton *logInButton = [TWTRLogInButton buttonWithLogInCompletion:^(TWTRSession *session, NSError *error) {
         if (session) {
             
+            [[UserManager sharedInstance] setCurrentLoggedInUser:[[User alloc] initWithTwtrSession:session]];
+            
+            HomeViewController *homeVC = [self.storyboard instantiateViewControllerWithIdentifier:HOME_IDENTIFIER];
+            [[UIApplication sharedApplication].delegate.window setRootViewController:homeVC];
             
         } else {
             NSLog(@"Login error: %@", [error localizedDescription]);
