@@ -19,7 +19,7 @@
                                                    style:UIAlertActionStyleDefault
                                                  handler:nil];
     [alert addAction:okay];
-    [self showViewController:alert sender:self];
+    [self showDetailViewController:alert sender:self];
 }
 
 @end

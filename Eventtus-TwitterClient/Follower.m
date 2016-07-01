@@ -18,7 +18,8 @@
     self.followerID = [json objectForKey:@"id_str"];
     self.followerName = [json objectForKey:@"screen_name"];
     self.followerScreenName = [json objectForKey:@"name"];
-    
+    self.BGImage = [ json objectForKey:@"profile_background_image_url_https"];
+    self.image = [json objectForKey:@"profile_image_url_https"];
     return self;
 }
 

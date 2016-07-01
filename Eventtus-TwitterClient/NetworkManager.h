@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <TwitterKit/TwitterKit.h>
+#import "Follower.h"
 
 @protocol NetworkManagerDelegate <NSObject>
 
@@ -18,6 +19,12 @@
 
 //called upon faiulre at getting followers, or followers of count 0
 -(void) failedToGetFollowers:(NSString *)error;
+
+// called at success getting tweets
+-(void) gotTweets:(NSArray *)tweets;
+
+//called upon faiulre at getting tweets, or tweets of count 0
+-(void) failedToGetTweets:(NSString *)error;
 
 @end
 
@@ -31,8 +38,12 @@
 
 //add a class that conforms the <NetworkManagerDelegate> protocol the array of observers
 -(void) addToObservers:(id <NetworkManagerDelegate>)object;
+-(void) removeFromObservers:(id)object;
 
 //fires a url to get user followers
 -(void) fetchFollowers;
+
+//fires a url to get tweets
+-(void) FetchTweetsForFollower:(Follower *)follower;
 
 @end

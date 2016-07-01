@@ -14,6 +14,9 @@
 @property (nonatomic, strong) NSString *followerID; //id_str
 @property (nonatomic, strong) NSString *followerScreenName; //screen_name
 @property (nonatomic, strong) NSString *followerName; //name
+@property (nonatomic, strong) NSString *image;
+
+@property (nonatomic, strong) NSString *BGImage;
 
 //initalize a follower object with dictionary.
 -(Follower *)initWithDictionary:(NSDictionary *)json;

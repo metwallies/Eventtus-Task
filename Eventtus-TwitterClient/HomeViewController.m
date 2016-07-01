@@ -11,11 +11,13 @@
 #import "UIViewController+String.h"
 #import "FollowersCell.h"
 #import "Follower.h"
+#import "DetailsViewController.h";
 
 @interface HomeViewController () <NetworkManagerDelegate, UITableViewDataSource, UITableViewDelegate>
 {
     NSMutableArray *followers;
     __weak IBOutlet UITableView *tblViewFollowers;
+    int selectedRow;
 }
 @end
 
@@ -41,12 +43,14 @@
 
 -(void) gotFollowers:(NSArray *)followersArray {
     
+    [[NetworkManager sharedInstance] removeFromObservers:self];
     [followers addObjectsFromArray:followersArray];
     [tblViewFollowers reloadData];
 }
 
 -(void) failedToGetFollowers:(NSString *)error {
     
+    [[NetworkManager sharedInstance] removeFromObservers:self];
     [self showAlertWithMessage:error];
 }
 
@@ -67,14 +71,22 @@
     return cell;
 }
 
-/*
+-(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    selectedRow = indexPath.row;
+    [self performSegueWithIdentifier:HOME_TO_DETAILS sender:self];
+}
+
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    
+    DetailsViewController *details = segue.destinationViewController;
+    details.currentFollower = [followers objectAtIndex:selectedRow];
 }
-*/
+
 
 @end

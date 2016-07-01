@@ -7,7 +7,6 @@
 //
 
 #import "NetworkManager.h"
-#import "Follower.h"
 
 static NetworkManager *sharedInstance;
 
@@ -26,6 +25,18 @@ static NetworkManager *sharedInstance;
     NSMutableArray *copy = [NSMutableArray arrayWithArray:self.observers];
     [copy addObject:object];
     self.observers = [NSArray arrayWithArray:copy];
+}
+
+-(void) removeFromObservers:(id)object {
+    
+    NSMutableArray *copy = [NSMutableArray arrayWithArray:self.observers];
+    for (id delegate in copy) {
+        if (delegate == object) {
+            [copy removeObject:delegate];
+        }
+    }
+    self.observers = (NSArray *)copy;
+    
 }
 
 -(void) fetchFollowers {
@@ -76,6 +87,30 @@ static NetworkManager *sharedInstance;
     }];
 }
 
+-(void) FetchTweetsForFollower:(Follower *) follower{
+    
+    //https://api.twitter.com/1.1/statuses/user_timeline.json
+    TWTRAPIClient *client = [[TWTRAPIClient alloc] initWithUserID:follower.followerID];
+    NSURLRequest *request = [client URLRequestWithMethod:@"GET"
+                                                     URL:[NSString stringWithFormat:@"https://api.twitter.com/1.1/statuses/user_timeline.json?user_id=%@&count=10", [UserManager sharedInstance].currentLoggedInUser.userID]
+                                              parameters:nil
+                                                   error:nil];
+    [client sendTwitterRequest:request completion:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+        if (data) {
+            NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data
+                                                                 options:NSJSONReadingAllowFragments
+                                                                          error:nil];
+            NSMutableArray *arr = [[NSMutableArray alloc] init];
+            for (NSDictionary *tempJson in json) {
+                NSLog(@"%@", tempJson);
+            }
+        }
+        else {
+            [self failGotTweetsBlock:@"error retrieving tweets"];
+        }
+    }];
+}
+
 //routine upon get followers success
 -(void) successGotFollowerBlock:(NSArray *)followers {
     NSArray *copy = [NSArray arrayWithArray:self.observers];
@@ -94,6 +129,28 @@ static NetworkManager *sharedInstance;
         
         if ([observer respondsToSelector:@selector(failedToGetFollowers:)]) {
             [observer failedToGetFollowers:error];
+        }
+    }
+}
+
+//routine upon get tweets success
+-(void) successGotTweetsBlock:(NSArray *)tweets {
+    NSArray *copy = [NSArray arrayWithArray:self.observers];
+    for (id<NetworkManagerDelegate> observer in copy) {
+        
+        if ([observer respondsToSelector:@selector(gotTweets:)]) {
+            [observer gotTweets:tweets];
+        }
+    }
+}
+
+//routine upon get tweets failure
+-(void) failGotTweetsBlock:(NSString *)error {
+    NSArray *copy = [NSArray arrayWithArray:self.observers];
+    for (id<NetworkManagerDelegate> observer in copy) {
+        
+        if ([observer respondsToSelector:@selector(failedToGetTweets:)]) {
+            [observer failedToGetTweets:error];
         }
     }
 }

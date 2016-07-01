@@ -10,5 +10,7 @@
 #define Constants_h
 
 #define HOME_IDENTIFIER @"home"
+#define DETAILS_IDENTIFIER @"details"
+#define HOME_TO_DETAILS @"openDetails"
 
 #endif /* Constants_h */

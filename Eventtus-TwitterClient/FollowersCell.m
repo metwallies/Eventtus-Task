@@ -7,6 +7,7 @@
 //
 
 #import "FollowersCell.h"
+#import "UIImageView+AFNetworking.h"
 
 @implementation FollowersCell
 
@@ -17,7 +18,8 @@
     self.lblName.text       = follower.followerName;
     self.lblScreenName.text = follower.followerScreenName;
     
-    //TODO: set image
+    [self.imgViewProfile setImageWithURL:[NSURL URLWithString:follower.image]
+                        placeholderImage:nil];
 }
 
 @end
