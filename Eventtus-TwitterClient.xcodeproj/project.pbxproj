@@ -32,6 +32,7 @@
 		DFD2889A1D2690ED00F7B2BC /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = DFD288931D2690ED00F7B2BC /* AFURLResponseSerialization.m */; };
 		DFD2889B1D2690ED00F7B2BC /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DFD288951D2690ED00F7B2BC /* AFURLSessionManager.m */; };
 		DFD2889E1D26911A00F7B2BC /* AFAutoPurgingImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = DFD2889D1D26911A00F7B2BC /* AFAutoPurgingImageCache.m */; };
+		DFD288A11D26A6F600F7B2BC /* CachingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DFD288A01D26A6F600F7B2BC /* CachingManager.m */; };
 		FBC3AFFAC9DA71B63EA9635E /* Pods_Eventtus_TwitterClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B50185FA8975984D98DDFA0D /* Pods_Eventtus_TwitterClient.framework */; };
 /* End PBXBuildFile section */
 
@@ -89,6 +90,8 @@
 		DFD288951D2690ED00F7B2BC /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
 		DFD2889C1D26911A00F7B2BC /* AFAutoPurgingImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFAutoPurgingImageCache.h; sourceTree = "<group>"; };
 		DFD2889D1D26911A00F7B2BC /* AFAutoPurgingImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFAutoPurgingImageCache.m; sourceTree = "<group>"; };
+		DFD2889F1D26A6F600F7B2BC /* CachingManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CachingManager.h; sourceTree = "<group>"; };
+		DFD288A01D26A6F600F7B2BC /* CachingManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CachingManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -231,6 +234,8 @@
 		DFC7771C1D24B05D004B4F7C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				DFD2889F1D26A6F600F7B2BC /* CachingManager.h */,
+				DFD288A01D26A6F600F7B2BC /* CachingManager.m */,
 				DFC7771D1D24B06A004B4F7C /* Network Controller */,
 				DFC777241D24C08B004B4F7C /* UserManager.h */,
 				DFC777251D24C08B004B4F7C /* UserManager.m */,
@@ -398,6 +403,7 @@
 				DFC777231D24BF6A004B4F7C /* User.m in Sources */,
 				DFD2889B1D2690ED00F7B2BC /* AFURLSessionManager.m in Sources */,
 				DFC777261D24C08B004B4F7C /* UserManager.m in Sources */,
+				DFD288A11D26A6F600F7B2BC /* CachingManager.m in Sources */,
 				DFD2887F1D268B5E00F7B2BC /* DetailsViewController.m in Sources */,
 				DF2BC8591D21A77500907EDF /* LoginViewController.m in Sources */,
 				DFC777201D24B381004B4F7C /* Follower.m in Sources */,

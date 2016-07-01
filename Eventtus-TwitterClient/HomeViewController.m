@@ -11,7 +11,8 @@
 #import "UIViewController+String.h"
 #import "FollowersCell.h"
 #import "Follower.h"
-#import "DetailsViewController.h";
+#import "DetailsViewController.h"
+#import "CachingManager.h"
 
 @interface HomeViewController () <NetworkManagerDelegate, UITableViewDataSource, UITableViewDelegate>
 {
@@ -31,6 +32,13 @@
     followers = [[NSMutableArray alloc] init];
     tblViewFollowers.rowHeight = UITableViewAutomaticDimension;
     tblViewFollowers.estimatedRowHeight = 104.0; //cell height at design.
+    
+    followers = (NSMutableArray *)[[CachingManager sharedInstance] fetchFollowersFromCache];
+    if (followers) {
+        [tblViewFollowers reloadData];
+    } else {
+        followers = [[NSMutableArray alloc] init];
+    }
     [[NetworkManager sharedInstance] addToObservers:self];
     [[NetworkManager sharedInstance] fetchFollowers];
 }
@@ -44,7 +52,11 @@
 -(void) gotFollowers:(NSArray *)followersArray {
     
     [[NetworkManager sharedInstance] removeFromObservers:self];
-    [followers addObjectsFromArray:followersArray];
+    followers = (NSMutableArray *)followersArray;
+    [[CachingManager sharedInstance] DeleteFollowersFromCache];
+    for (Follower *follower in followersArray) {
+        [[CachingManager sharedInstance] saveFollower:follower];
+    }
     [tblViewFollowers reloadData];
 }
 

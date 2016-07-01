@@ -12,5 +12,6 @@
 #define HOME_IDENTIFIER @"home"
 #define DETAILS_IDENTIFIER @"details"
 #define HOME_TO_DETAILS @"openDetails"
+#define APPLICATION_DELEGATE (AppDelegate *)[[UIApplication sharedApplication] delegate]
 
 #endif /* Constants_h */
