@@ -12,6 +12,8 @@
 @interface UserManager : NSObject
 
 +(UserManager *) sharedInstance;
+-(void) setUserDefaults;
+
 @property (nonatomic ,strong) User *currentLoggedInUser;
 
 

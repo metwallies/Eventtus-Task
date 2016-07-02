@@ -18,6 +18,13 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     [Fabric with:@[[Twitter class]]];
+    
+    if ([[NSUserDefaults standardUserDefaults] objectForKey:@"ID"]) {
+        //TODO open at home screen
+        UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        [self.window setRootViewController:[storyBoard instantiateViewControllerWithIdentifier:HOME_IDENTIFIER]];
+    }
+    
     return YES;
 }
 

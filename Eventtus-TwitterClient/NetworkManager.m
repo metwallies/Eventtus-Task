@@ -30,7 +30,8 @@ static NetworkManager *sharedInstance;
 -(void) removeFromObservers:(id)object {
     
     NSMutableArray *copy = [NSMutableArray arrayWithArray:self.observers];
-    for (id delegate in copy) {
+    for (int i = 0 ; i < copy.count ; i++) {
+        id delegate = copy[i];
         if (delegate == object) {
             [copy removeObject:delegate];
         }
@@ -90,19 +91,31 @@ static NetworkManager *sharedInstance;
 -(void) FetchTweetsForFollower:(Follower *) follower{
     
     //https://api.twitter.com/1.1/statuses/user_timeline.json
-    TWTRAPIClient *client = [[TWTRAPIClient alloc] initWithUserID:follower.followerID];
+    TWTRAPIClient *client = [TWTRAPIClient clientWithCurrentUser];
     NSURLRequest *request = [client URLRequestWithMethod:@"GET"
-                                                     URL:[NSString stringWithFormat:@"https://api.twitter.com/1.1/statuses/user_timeline.json?user_id=%@&count=10", [UserManager sharedInstance].currentLoggedInUser.userID]
+                                                     URL:[NSString stringWithFormat:@"https://api.twitter.com/1.1/statuses/user_timeline.json?user_id=%@&count=10", follower.followerID]
                                               parameters:nil
                                                    error:nil];
     [client sendTwitterRequest:request completion:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
         if (data) {
-            NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data
+            NSArray *json = [NSJSONSerialization JSONObjectWithData:data
                                                                  options:NSJSONReadingAllowFragments
                                                                           error:nil];
-            NSMutableArray *arr = [[NSMutableArray alloc] init];
-            for (NSDictionary *tempJson in json) {
-                NSLog(@"%@", tempJson);
+            if (json) {
+                NSMutableArray *arr = [[NSMutableArray alloc] init];
+                for (NSDictionary *tempJson in json) {
+                    [arr addObject:[tempJson objectForKey:@"text"]];
+                }
+                if (arr.count) {
+                    [self successGotTweetsBlock:arr];
+                }
+            
+                else {
+                    [self failGotTweetsBlock:@"No tweets was found"];
+                }
+            }
+            else {
+                [self failGotTweetsBlock:@"Something is wrong with the data"];
             }
         }
         else {

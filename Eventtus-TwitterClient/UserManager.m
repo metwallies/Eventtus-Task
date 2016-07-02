@@ -22,4 +22,12 @@ static UserManager *sharedInstance;
     return sharedInstance;
 }
 
+-(void) setUserDefaults{
+    
+    [[NSUserDefaults standardUserDefaults] setObject:self.currentLoggedInUser.userID forKey:@"ID"];
+    [[NSUserDefaults standardUserDefaults] setObject:self.currentLoggedInUser.screenName forKey:@"screenName"];
+    [[NSUserDefaults standardUserDefaults] setObject:self.currentLoggedInUser.userID forKey:@"AuthToken"];
+    [[NSUserDefaults standardUserDefaults] setObject:self.currentLoggedInUser.userID forKey:@"AuthSecret"];
+}
+
 @end

@@ -26,6 +26,7 @@
         if (session) {
             
             [[UserManager sharedInstance] setCurrentLoggedInUser:[[User alloc] initWithTwtrSession:session]];
+            [[UserManager sharedInstance] setUserDefaults];
             
             HomeViewController *homeVC = [self.storyboard instantiateViewControllerWithIdentifier:HOME_IDENTIFIER];
             [[UIApplication sharedApplication].delegate.window setRootViewController:homeVC];
