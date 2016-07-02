@@ -43,17 +43,21 @@
     [[NetworkManager sharedInstance] fetchFollowers];
 }
 
-#pragma mark - NetworkManagerDelegate
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - NetworkManagerDelegate
+
 -(void) gotFollowers:(NSArray *)followersArray {
     
     [[NetworkManager sharedInstance] removeFromObservers:self];
     followers = (NSMutableArray *)followersArray;
+    
+    // at success remove all followers from DB and then add new.
     [[CachingManager sharedInstance] DeleteFollowersFromCache];
+    
     for (Follower *follower in followersArray) {
         [[CachingManager sharedInstance] saveFollower:follower];
     }

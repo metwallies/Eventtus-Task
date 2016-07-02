@@ -23,4 +23,17 @@
     return self;
 }
 
+
+-(Follower *) initWithDictFromCache:(NSDictionary *)json {
+    
+    self = [super init];
+    
+    self.followerDescription = [json objectForKey:@"followerDesc"];
+    self.followerID = [json objectForKey:@"followerID"];
+    self.followerName = [json objectForKey:@"followerScreenName"];
+    self.followerScreenName = [json objectForKey:@"followerName"];
+    self.BGImage = [ json objectForKey:@"followerBGImage"];
+    self.image = [json objectForKey:@"followerImage"];
+    return self;
+}
 @end

@@ -58,7 +58,7 @@
         NSArray *keys = [[[info entity] attributesByName] allKeys];
         NSDictionary *dict = [info dictionaryWithValuesForKeys:keys];
         
-        Follower *follower = [[Follower alloc] initWithDictionary:dict];
+        Follower *follower = [[Follower alloc] initWithDictFromCache:dict];
         [results addObject:follower];
     }
     if (results.count) {

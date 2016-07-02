@@ -21,4 +21,7 @@
 //initalize a follower object with dictionary.
 -(Follower *)initWithDictionary:(NSDictionary *)json;
 
+//initalize a follower object from dictionary from local cache.
+-(Follower *) initWithDictFromCache:(NSDictionary *) dict;
+
 @end
