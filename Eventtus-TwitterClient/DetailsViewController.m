@@ -13,7 +13,9 @@
 #import "UIViewController+String.h"
 
 @interface DetailsViewController () <UITableViewDelegate, UITableViewDataSource, NetworkManagerDelegate>
-
+{
+    NSMutableArray *arrTweets;
+}
 @property (weak, nonatomic) IBOutlet UIImageView *imgViewBG;
 @property (weak, nonatomic) IBOutlet UIImageView *imgViewProfile;
 @property (weak, nonatomic) IBOutlet UILabel *lblScreenName;
@@ -47,14 +49,14 @@
 
 -(NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    return 10;
+    return arrTweets.count;
 }
 
 -(UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     TweetCell *cell = (TweetCell *)[tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     
-    cell.lblTweet.text = @"test";
+    cell.lblTweet.text = arrTweets[indexPath.row];
     
     return cell;
 }
@@ -64,6 +66,10 @@
 -(void) gotTweets:(NSArray *)tweets {
     
     [[NetworkManager sharedInstance] removeFromObservers:self];
+    arrTweets = (NSMutableArray *)tweets;
+    [self.tblViewTweets reloadData];
+    
+    
 }
 
 -(void) failedToGetTweets:(NSString *)error {
